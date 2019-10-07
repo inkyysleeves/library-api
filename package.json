@@ -4,7 +4,8 @@
   "description": "library-API",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "nodemon -r dotenv/config index.js",
+    "test": "mocha tests/**/*.test.js --timeout 10000 --opts .mocha.opts"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,13 @@
     "eslint-plugin-react": "^7.9.1"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "mongoose": "^5.7.3"
+    "mocha": "^6.2.1",
+    "mongoose": "^5.7.3",
+    "nodemon": "^1.19.3"
   }
 }
